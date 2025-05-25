@@ -101,6 +101,7 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/custom-styles.css" />
     <link rel="stylesheet" href="./assets/css/timeline-styles.css" />
+    <link rel="stylesheet" href="./assets/css/navbar-improvements.css" />
   </head>
   <body>
     <!-- Page loading -->
@@ -129,6 +130,7 @@
       class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
       role="banner"
       aria-label="Navigation bar"
+      id="mainNavbar"
     >
       <div class="container">
         <div
@@ -137,16 +139,16 @@
           <div class="w-60 lg:w-56 max-w-full px-5 mr-auto">
             <a
               href="."
-              class="ic-navbar-logo block w-full py-5 text-primary-color"
+              class="ic-navbar-logo block w-full py-3 text-primary-color transition-all duration-300"
             >
-              <h2 class="text-2xl font-bold">La Fayenne Consulting</h2>
+              <img src="./assets/img/custom/17.png" alt="La Fayenne Consulting" class="h-14 lg:h-16 object-contain">
             </a>
           </div>
           <div class="flex w-full items-center justify-between px-5">
             <div>
               <button
                 type="button"
-                class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
+                class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-2 text-[22px]/none text-primary-color bg-[#d9a256]/10 hover:bg-[#d9a256]/20 transition-all duration-300 ring-primary focus:ring-2 lg:hidden"
                 data-web-toggle="navbar-collapse"
                 data-web-target="navbarMenu"
                 aria-expanded="false"
@@ -157,7 +159,7 @@
 
               <nav
                 id="navbarMenu"
-                class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
+                class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-white py-5 shadow-lg border border-[#d9a256]/20 dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none lg:border-0 dark:lg:bg-transparent xl:px-6"
               >
                 <ul
                   class="block lg:flex"
@@ -226,15 +228,6 @@
                       >Tarification</a
                     >
                   </li>
-
-                  <li class="group relative">
-                    <a
-                      href="#contact"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                      role="menuitem"
-                      >Contact</a
-                    >
-                  </li>
                 </ul>
               </nav>
             </div>
@@ -248,7 +241,7 @@
               <div class="hidden sm:flex">
                 <a
                   href="#contact"
-                  class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary ic-page-scroll"
+                  class="btn-navbar ml-5 px-6 py-3 rounded-md text-base font-medium ic-page-scroll"
                   role="button"
                   >Contactez-nous</a
                 >

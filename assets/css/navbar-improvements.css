@@ -1,0 +1,106 @@
+/* Navbar Improvements */
+
+/* Enhanced Navbar Styling */
+.ic-navbar {
+  transition: all 0.3s ease;
+}
+
+.ic-navbar.sticky {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  padding: 5px 0;
+}
+
+.ic-navbar.sticky .ic-navbar-logo img {
+  transform: scale(0.9);
+}
+
+/* Menu Item Styling */
+.ic-navbar .group {
+  position: relative;
+}
+
+.ic-navbar .group a.ic-page-scroll::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #d9a256;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.ic-navbar .group:hover a.ic-page-scroll::after,
+.ic-navbar .group a.ic-page-scroll.active::after {
+  width: 70%;
+  opacity: 1;
+}
+
+.ic-navbar.sticky .group:hover a.ic-page-scroll::after,
+.ic-navbar.sticky .group a.ic-page-scroll.active::after {
+  background-color: #d9a256;
+}
+
+/* Mobile Menu Improvements */
+@media (max-width: 1023px) {
+  .ic-navbar-collapse {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    z-index: 100;
+  }
+  
+  .ic-navbar.menu-show .ic-navbar-collapse {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ic-navbar-collapse ul li {
+    border-bottom: 1px solid rgba(217, 162, 86, 0.1);
+  }
+  
+  .ic-navbar-collapse ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .ic-navbar-collapse ul li a {
+    padding: 12px 15px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .ic-navbar-collapse ul li a:hover,
+  .ic-navbar-collapse ul li a.active {
+    background-color: rgba(217, 162, 86, 0.1);
+    color: #d9a256 !important;
+  }
+}
+
+/* Enhanced Contact Button */
+.btn-navbar {
+  background-color: #d9a256 !important;
+  color: white !important;
+  border: 2px solid #d9a256 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 10px rgba(217, 162, 86, 0.2) !important;
+}
+
+.btn-navbar:hover {
+  background-color: transparent !important;
+  color: #d9a256 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(217, 162, 86, 0.25) !important;
+}
+
+.ic-navbar.sticky .btn-navbar {
+  background-color: #d9a256 !important;
+  color: white !important;
+}
+
+.ic-navbar.sticky .btn-navbar:hover {
+  background-color: transparent !important;
+  color: #d9a256 !important;
+}

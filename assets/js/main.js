@@ -33,13 +33,16 @@ navbarToggler.addEventListener("click", function () {
     : '<i class="lni lni-menu"></i>';
 });
 
-// Sticky navbar
+// Sticky navbar with smooth transition
 window.addEventListener("scroll", function () {
-  if (this.scrollY >= 72) {
+  if (this.scrollY >= 50) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
+  
+  // Add active class to current section in menu
+  scrollspy();
 });
 
 // Web theme
